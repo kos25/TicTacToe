@@ -5,23 +5,40 @@ import java.util.*;
 public class TicTacToe{
 public static int[][] ticbox;
 	public static int win(int [][]tic) {
-		//check all rows
-		//loop through rows from 0 to 3 and check if all the 3 places have same marks
- 		
+	     int r =-1;
+	     while(r<2)
+	     {
+	    	 r++;
+	    	if (tic[r][0]==1 &&  tic[r][1]==1 && tic[r][2]==1)
+	    			
+	        return 1; 
+	        else  if ((tic[r][0]==2 &&  tic[r][1]==2 && tic[r][2]==2))
+	       return 2; 
+	      
+	    	}
 		
-		//check all cols
-		//loop through columns from 0 to 3 and check if all the 3 places have same marks
- 		
-		//check both diagonals 
-		
-		
-		
-		//write your code here !!!
-		
-		
-		
-		return 0;
-		
+	     int col =-1;
+	     
+	     while(col<2)
+	     {
+	    	 col++;
+	    	 if (tic[0][col]==1 &&  tic[1][col]==1 && tic[2][col]==1)
+	    		 return 1;
+	    	 if(tic[0][col]==2 &&  tic[1][col]==2 && tic[2][col]==2)
+	    		 return 2;
+	        }
+	     if(tic[0][0]==1 &&  tic[1][1]==1 && tic[2][1]==1)
+	    	 return 1;
+	      if(tic[0][0]==2 &&  tic[1][1]==2 && tic[2][1]==2)
+	    	 return 2;
+	     if(tic[0][2]==1 &&  tic[1][1]==1 && tic[2][0]==1)
+	    	 return 1;
+	      if(tic[0][2]==2 &&  tic[1][1]==2 && tic[2][0]==2)
+	    	 return 2;
+	     
+	     
+	     return 0;
+	     
 	}
 	
 	public static void printBox(int [][]tic) {
@@ -40,9 +57,22 @@ public static int[][] ticbox;
 		
 		
 		//Write your code here !!!
+		if(a1>=0 && a1<3)
+		{
+			if(a2>=0 && a2<3)
+			{
+				if(tic[a1][a2]==0)
+					return true ;
+				else 
+					return false;
+			}
+			else 
+				return false ;
+		}
 		
 		
-		return false;
+		else 
+			return false;
 	}
 	public static void main(String args[]) {
 		
